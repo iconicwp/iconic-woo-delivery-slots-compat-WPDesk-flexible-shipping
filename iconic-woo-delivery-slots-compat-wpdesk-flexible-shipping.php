@@ -37,11 +37,12 @@ function iconic_compat_wpdesk_flexible_shipping_update_shipping_method_id( $ship
 
 	foreach ( $shipping_method_options as $method_key => $method_name ) {
 		if ( false !== strpos( $method_key, 'wpdesk\fs\tablerate\shippingmethodsingle:' ) ) {
-			$method_key = str_replace( 'wpdesk\fs\tablerate\shippingmethodsingle:', 'flexible_shipping_single:5', $method_key );
+			$method_key = str_replace( 'wpdesk\fs\tablerate\shippingmethodsingle:', 'flexible_shipping_single:', $method_key );
 		}
 
 		$updated_shipping_method[ $method_key ] = $method_name;
 	}
+
 
 	return $updated_shipping_method;
 }
